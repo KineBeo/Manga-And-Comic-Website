@@ -18,6 +18,11 @@ mongoose
   .then(() => console.log("Connected to database"))
   .catch((err) => console.log(err));
 
+const cors = require('cors');
+app.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true,
+}))
 app.use('/', itemRoute);
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

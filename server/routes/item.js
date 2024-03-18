@@ -10,7 +10,7 @@ router.post("/api/item", async (req, res) => {
     const saveItem = await newItem.save();
     res.status(200).json("Item saved successfully");
   } catch (err) {
-    res.json(err);
+    console.error(err);
   }
 });
 
@@ -18,9 +18,10 @@ router.post("/api/item", async (req, res) => {
 router.get("/api/items", async (req, res) => {
   try {
     const allItems = await ItemModel.find({});
+    res.json(allItems);
     res.status(200).json(allItems);
   } catch (err) {
-    res.json(err);
+    console.error(err);
   }
 });
 
@@ -33,7 +34,7 @@ router.put("/api/item/:id", async (req, res) => {
     });
     res.status(200).json("Item updated successfully");
   } catch (err) {
-    res.json(err);
+    console.error(err);
   }
 });
 
@@ -44,7 +45,7 @@ router.delete("/api/item/:id", async (req, res) => {
     const deleteItem = await ItemModel.findByIdAndDelete(req.params.id);
     res.status(200).json("Item deleted successfully");
   } catch (err) {
-    res.json(err);
+    console.error(err);
   }
 });
 

@@ -1,23 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./index.css";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-green-400 p-5 m-4 flex flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold underline">Manga Web Front End</h1>
+      <p className="text-lg">This is the front end for the manga web app</p>
     </div>
   );
 }
