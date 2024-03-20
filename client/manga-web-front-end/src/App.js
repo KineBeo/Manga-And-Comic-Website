@@ -6,6 +6,7 @@ function App() {
       <h1 className="text-4xl font-bold underline">Manga Web Front End</h1>
       <p className="text-lg">This is the front end for the manga web app</p>
       <p>Không biết viết gì =)) </p>
+      <p>Suck my dick</p>
     </div>
   );
 }
